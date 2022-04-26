@@ -21,7 +21,7 @@ following is a summary of the TCK results for releases of Jakarta Security.
 - Any Additional Specification Certification Requirements: <br/>
   None
 - Java runtime used to run the implementation: <br/>
-  OpenJDK 11.0.2, 17.0.1, 18-ea
+  OpenJDK 11.0.2, 17.0.1
 - Summary of the information for the certification environment, operating system, cloud, ...: <br/>
   Debian GNU/Linux 10
 
