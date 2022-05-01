@@ -14,8 +14,8 @@ following is a summary of the TCK results for releases of Jakarta Security.
 - Specification Name, Version and download URL: <br/>
   [Jakarta Security 3.0](https://jakarta.ee/specifications/security/3.0)
 - TCK Version, digital SHA-256 fingerprint and download URL: <br/>
-  Staged: [Jakarta Security 3.0, TCK](https://download.eclipse.org/es/jakartaee10/staged/eftl/jakarta-security-tck-3.0.0.zip)
-  , SHA-256: `66cd64ba7add3c7a26ad02367c25b353f20b25d5855fd6d972ceb17c6621e532`
+  Staged: [Jakarta Security 3.0, TCK](http://download.eclipse.org/ee4j/jakartaee-tck/jakartaee10/staged/eftl/jakarta-security-tck-3.0.0.zip)
+  , SHA-256: `c5235d3ef2a5ecdde7bfdfc7d2d808f7a84502c1b9096027ea47528eb7499536`
 - Public URL of TCK Results Summary: <br/>
   [TCK results summary](TCK-Results.html)
 - Any Additional Specification Certification Requirements: <br/>
@@ -176,8 +176,8 @@ Test results:
 [INFO] ------------------------------------------------------------------------
 SHA256_API=
 SHA256_IMPL=
-SHA256_TCK=66cd64ba7add3c7a26ad02367c25b353f20b25d5855fd6d972ceb17c6621e532
-TCK_download=https://download.eclipse.org/es/jakartaee10/staged/eftl/jakarta-security-tck-3.0.0.zip
+SHA256_TCK=c5235d3ef2a5ecdde7bfdfc7d2d808f7a84502c1b9096027ea47528eb7499536
+TCK_download=http://download.eclipse.org/ee4j/jakartaee-tck/jakartaee10/staged/eftl/jakarta-security-tck-3.0.0.zip
 OS2=Debian GNU/Linux 10
 OS3=10.12
 OS4=PRETTY_NAME="Debian GNU/Linux 10 (buster)" NAME="Debian GNU/Linux" VERSION_ID="10" VERSION="10 (buster)" VERSION_CODENAME=buster ID=debian HOME_URL="https://www.debian.org/" SUPPORT_URL="https://www.debian.org/support" BUG_REPORT_URL="https://bugs.debian.org/"
