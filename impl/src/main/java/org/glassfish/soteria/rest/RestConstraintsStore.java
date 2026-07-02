@@ -52,7 +52,7 @@ public final class RestConstraintsStore {
 
         getOrCreateConstraints(servletContext)
                 .computeIfAbsent(
-                    normalizeApplicationBasePath(applicationBasePath),
+                    toServletPathBase(applicationBasePath),
                     ignored -> new ArrayList<>())
                 .add(restConstraint);
     }
@@ -90,7 +90,7 @@ public final class RestConstraintsStore {
             return List.of();
         }
 
-        List<RestConstraint> applicationConstraints = constraints.get(normalizeApplicationBasePath(applicationBasePath));
+        List<RestConstraint> applicationConstraints = constraints.get(toServletPathBase(applicationBasePath));
 
         return applicationConstraints == null ? List.of() : applicationConstraints;
     }
@@ -126,8 +126,28 @@ public final class RestConstraintsStore {
         return existing instanceof Map<?, ?> map ? (Map<String, List<RestConstraint>>) map : null;
     }
 
+    private static String toServletPathBase(String applicationBasePath) {
+        String normalized = normalizeApplicationBasePath(applicationBasePath);
+
+        return normalized.isEmpty() ? EMPTY_STRING : "/" + normalized;
+    }
+
     private static String normalizeApplicationBasePath(String applicationBasePath) {
-        return isBlank(applicationBasePath) || applicationBasePath.equals("/") ? EMPTY_STRING : applicationBasePath;
+        if (isBlank(applicationBasePath)) {
+            return EMPTY_STRING;
+        }
+
+        String result = applicationBasePath.trim();
+
+        while (result.startsWith("/")) {
+            result = result.substring(1);
+        }
+
+        while (result.endsWith("/") && !result.isEmpty()) {
+            result = result.substring(0, result.length() - 1);
+        }
+
+        return result;
     }
 
 }
